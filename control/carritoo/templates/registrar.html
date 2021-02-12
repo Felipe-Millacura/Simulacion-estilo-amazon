@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/registrar.css' %}">
+<link rel="stylesheet" href="{% static 'css/botones.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}">
+<body>
+<div class="bloque">
+    <div class="row">
+        <div class="col-xs-6">
+            <a id="botones" href='/'>Volver</a>
+            <br><br>
+            <form method="POST" adtion='' enctype='multipart/form-data'>
+                {% csrf_token %}
+                <label>Imagen</label>
+                {{form.Foto}}
+                <label>Nombre del producto</label>
+                {{form.NombreProducto}}
+                <label>Descripcion</label>
+                {{form.Descripcion}}
+                <label>Stock</label>
+                {{form.Stock}}
+                <label>Precio de entrada USD</label>
+                <input type="number" name="PrecioEntrada">
+                <button type="submit">registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+{%  endblock %}

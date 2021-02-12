@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+{% for p in producto %}
+<link rel="stylesheet" href="{% static 'css/botones.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}">
+<div class="bloque">
+<h1>_________________________________________________________________________________________________________</h1>
+<br><br>
+<h2>-{{p.NombreProducto}}</h2>
+<br><br>
+<a id="botones" href='/productos/detalle/{{p.pk}}'>Detalles del producto</a> -- <a id="botones" href='/productos/editar/{{p.pk}}'>Actualizar precio</a>
+</div>
+<br><br>
+{% endfor %}
+{% endblock %}

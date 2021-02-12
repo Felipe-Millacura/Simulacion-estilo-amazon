@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/botones.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}">
+<div class="bloque">
+    <a id="botones" href="/">Volver a productos</a>
+    <br><br>
+    <br><br>
+    <header class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="bloqueFoto">
+                <h1>{{producto.NombreProducto}}</h1>
+                <br><br>
+                <img src="{{producto.Foto.url}}" alt="imagen" width="85%">
+            </div>
+        </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="bloque3">
+            <br><br>
+            <br><br>
+            <b>Características:</b>
+            <br><br>
+    <div class="col-xs-12">
+        {{producto.Descripcion}}
+    </div>
+            <br>
+        <b>Stock:</b> {{producto.Stock}}
+            <br><br>
+        <b>Precio de entrada USD:</b> ${{producto.PrecioEntrada}}
+            <br><br>
+        <b>Precio de final USD:</b> ${{producto.PrecioFinal}}
+            <br><br>
+        </div>
+    </div>
+    </header>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/registrar.css' %}">
+<link rel="stylesheet" href="{% static 'css/botones.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}">
+<body>
+<div class="bloque">
+    <div class="row">
+        <div class="col-xs-6">
+            <a id="botones" href='/'>Volver</a>
+            <br><br>
+            <form method="POST" adtion='' enctype='multipart/form-data'>
+                {% csrf_token %}
+                <label>Imagen</label>
+                {{form.Foto}}
+                <label>Nombre del producto</label>
+                {{form.NombreProducto}}
+                <label>Descripcion</label>
+                {{form.Descripcion}}
+                <label>Stock</label>
+                {{form.Stock}}
+                <label>Precio de entrada USD</label>
+                <input onkeyup="obtenerSuma();" id="sumando1" type="number" name="PrecioEntrada">
+                <label>Agregar valor amazon USD</label>
+                <input onkeyup="obtenerSuma();" id="sumando2" type="number" name="PrecioAmazon">
+                <label>Precio Final USD</label>
+                <input id="resultado" type="number" name="PrecioFinal">
+                <button type="submit">Actualizar</button>
+            </form>
+            <script>
+                function obtenerSuma()
+                {
+                    document.getElementById('resultado').value=parseFloat(document.getElementById('sumando1').value)+parseFloat(document.getElementById('sumando2').value);
+                }
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+{%  endblock %}

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazon</title>
+</head>
+<div class="header">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="contenedor">
+                <img id="logo" src="{% static 'img/logo.png' %}" alt="logo">
+                <a id="boton" href="http://127.0.0.1:8000/productos/nuevo/">REGISTRAR PRODUCTO</a>
+            </div>
+        </div>
+    </div>
+</div>
+<body>
+    {% block content%}
+    {% endblock %}
+</body>
+</html>

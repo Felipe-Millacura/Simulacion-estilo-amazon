@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#botones {
+    border-top: 1px solid #f9e6ba;
+    background: #f0c24d;
+    background: -webkit-linear-gradient(top, #f8e6ba, #f0c24d);
+    background: -moz-linear-gradient(top, #f8e6ba, #f0c24d);
+    background: -ms-linear-gradient(top, #f8e6ba, #f0c24d);
+    background: -o-linear-gradient(top, #f8e6ba, #f0c24d);
+    padding: 6.5px 13px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#botones:hover {
+    border-top-color: #f1c963;
+    background: #f1c963;
+    color: #000000;
+}
+
+#botones:active {
+    border-top-color: #f0c24d;
+    background: #f0c24d;
+}
+
+.bloque{
+    margin: 10px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+.bloqueFoto{
+    text-align: right;
+}
